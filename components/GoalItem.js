@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const GoalItem = props => {
     return(
-        <TouchableOpacity>
+        <TouchableOpacity onPress={props.onDelete}>
             <View style = {styles.listItem}>
                 <Text>{props.title}</Text>
             </View>
@@ -12,9 +12,8 @@ const GoalItem = props => {
 
 };
 
+
 const styles = StyleSheet.create({
-
-
     listItem:{
         padding:10,
         marginVertical:10,
